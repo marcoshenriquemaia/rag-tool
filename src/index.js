@@ -45,7 +45,7 @@ export const run = () => {
     const ptsQuantity = document.querySelectorAll('.pt-en')?.length + 1
     const id = Math.random() * 10
     const newEl = document.createElement('img')
-    newEl.src = baron
+    newEl.src = `.${baron}`
     newEl.classList.add('boss')
     newEl.textContent = ptsQuantity
     newEl.id = id
@@ -59,7 +59,7 @@ export const run = () => {
     const ptsQuantity = document.querySelectorAll('.pt-en')?.length + 1
     const id = Math.random() * 10
     const newEl = document.createElement('img')
-    newEl.src = goblin
+    newEl.src = `.${goblin}`
     newEl.classList.add('goblin')
     newEl.textContent = ptsQuantity
     newEl.id = id
