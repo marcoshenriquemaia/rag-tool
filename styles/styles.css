@@ -2,6 +2,11 @@ body {
   overflow: hidden;
   background-color: black;
   color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pt {
@@ -21,9 +26,18 @@ body {
   top: 500px;
 }
 
+.battlefield {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .battlefield img {
-  width: 1050px;
-  height: 70vh;
+  width: 50%;
+  /* height: 70vh; */
+  opacity: .8;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -46,14 +60,28 @@ body {
   color: red;
 }
 
+.button-add-goblin {
+  border: 3px solid yellow;
+  color: yellow;
+}
+
+.button-add-boss{
+  border: 3px solid yellow;
+  color: yellow;
+}
+
 .pt-al {
   border: 5px solid blue;
   color: blue;
+  box-shadow: 2px 3px 3px #0000004D;
+  backdrop-filter: blur(10px);
 }
 
 .pt-en {
   border: 5px solid red;
   color: red;
+  box-shadow: 2px 3px 3px #0000004D;
+  backdrop-filter: blur(10px);
 }
 
 .top-wrapper{
@@ -62,4 +90,93 @@ body {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.boss {
+  width: 42px!important;
+  height: 72px!important;
+  cursor: move;
+  opacity: 1!important;
+}
+
+.goblin {
+  width: 42px!important;
+  height: 42px!important;
+  cursor: move;
+  opacity: 1!important;
+}
+
+.modal-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-list {
+  /* position: absolute; */
+  display: flex;
+  right: 100px;
+  top: 100px;
+  gap: 10px;
+  overflow: auto;
+}
+
+.player-list li {
+  list-style: none;
+}
+
+.button-player-list {
+  display: none;
+}
+
+.player-list-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.player-list-wrapper {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: transparent;
+  transition: 300ms;
+}
+ 
+.focus {
+  background-color: #cccccc;
+  color: black;
+}
+
+.players-title {
+  margin: 0;
+}
+
+@media (min-width: 1920px) {
+  .battlefield img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1365px) {
+  .pt {
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+  }
 }
