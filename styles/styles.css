@@ -1,5 +1,7 @@
 body {
   overflow: hidden;
+  background-color: black;
+  color: white;
 }
 
 .pt {
@@ -15,11 +17,13 @@ body {
   cursor: move;
   user-select: none;
   color: #fff;
+  left: 500px;
+  top: 500px;
 }
 
 .battlefield img {
   width: 1050px;
-  height: 80vh;
+  height: 70vh;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -28,12 +32,18 @@ body {
   -ms-user-select: none;
 }
 
+.button-add {
+  background-color: transparent;
+}
+
 .button-add-ally {
-  border: 3px solid blue
+  border: 3px solid blue;
+  color: blue;
 }
 
 .button-add-enemy {
-  border: 3px solid red
+  border: 3px solid red;
+  color: red;
 }
 
 .pt-al {
@@ -44,4 +54,12 @@ body {
 .pt-en {
   border: 5px solid red;
   color: red;
+}
+
+.top-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
 }

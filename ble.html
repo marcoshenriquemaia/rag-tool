@@ -1,18 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
       <section class="battlefield">
-        <img src="map.png">
-        <button class="button-add button-add-ally">Ally</button>
-        <button class="button-add button-add-enemy">Enemy</button>
+        <div class="top-wrapper">
+          <div>
+            <strong>#UpYourTitle</strong>
+            <strong>#IncreaseYourPvPPoints</strong>
+          </div>
+          <div>
+            <button class="button-add button-add-ally">Add Ally</button>
+            <button class="button-add button-add-enemy">Add Enemy</button>
+          </div>
+        </div>
+        <img src="./map.png" />
       </section>
     </div>
     <script type="module" src="/main.js"></script>
