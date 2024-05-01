@@ -3,7 +3,6 @@ import { drag } from "./modules/drag"
 const colorArray = [
   "#ff0000", // Red
   "#00ff00", // Green
-  "#0000ff", // Blue
   "#ffff00", // Yellow
   "#ff00ff", // Magenta
   "#00ffff", // Cyan
@@ -14,20 +13,37 @@ const colorArray = [
 ];
 
 export const run = () => {
-  const $buttonAdd = document.querySelector('.button-add')
+  const $buttonAddAlly = document.querySelector('.button-add-ally')
+  const $buttonAddEnemy = document.querySelector('.button-add-enemy')
   const $battlefield = document.querySelector('.battlefield')
 
-  $buttonAdd.addEventListener('click', () => {
+  $buttonAddAlly.addEventListener('click', () => {
     const ptsQuantity = document.querySelectorAll('.pt')?.length + 1
     const id = Math.random() * 10
     const newEl = document.createElement('div')
-    newEl.style.backgroundColor = colorArray[ptsQuantity % 10]
+    // newEl.style.backgroundColor = colorArray[ptsQuantity % 10]
     newEl.classList.add('pt')
+    newEl.classList.add('pt-al')
     newEl.textContent = ptsQuantity
     newEl.id = id
 
-    drag(newEl, console.log)
+    drag(newEl)
     
+    $battlefield.appendChild(newEl)
+  })
+  
+  $buttonAddEnemy.addEventListener('click', () => {
+    const ptsQuantity = document.querySelectorAll('.pt')?.length + 1
+    const id = Math.random() * 10
+    const newEl = document.createElement('div')
+    // newEl.style.backgroundColor = colorArray[ptsQuantity % 10]
+    newEl.classList.add('pt')
+    newEl.classList.add('pt-en')
+    newEl.textContent = ptsQuantity
+    newEl.id = id
+    
+    drag(newEl)
+
     $battlefield.appendChild(newEl)
   })
 } 

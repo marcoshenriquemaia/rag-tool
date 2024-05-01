@@ -6,7 +6,6 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: red;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -15,6 +14,7 @@ body {
   font-weight: bold;
   cursor: move;
   user-select: none;
+  color: #fff;
 }
 
 .battlefield img {
@@ -26,4 +26,22 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.button-add-ally {
+  border: 3px solid blue
+}
+
+.button-add-enemy {
+  border: 3px solid red
+}
+
+.pt-al {
+  border: 5px solid blue;
+  color: blue;
+}
+
+.pt-en {
+  border: 5px solid red;
+  color: red;
 }
