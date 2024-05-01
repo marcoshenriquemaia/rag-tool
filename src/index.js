@@ -18,10 +18,9 @@ export const run = () => {
   const $battlefield = document.querySelector('.battlefield')
 
   $buttonAddAlly.addEventListener('click', () => {
-    const ptsQuantity = document.querySelectorAll('.pt')?.length + 1
+    const ptsQuantity = document.querySelectorAll('.pt-al')?.length + 1
     const id = Math.random() * 10
     const newEl = document.createElement('div')
-    // newEl.style.backgroundColor = colorArray[ptsQuantity % 10]
     newEl.classList.add('pt')
     newEl.classList.add('pt-al')
     newEl.textContent = ptsQuantity
@@ -33,10 +32,9 @@ export const run = () => {
   })
   
   $buttonAddEnemy.addEventListener('click', () => {
-    const ptsQuantity = document.querySelectorAll('.pt')?.length + 1
+    const ptsQuantity = document.querySelectorAll('.pt-en')?.length + 1
     const id = Math.random() * 10
     const newEl = document.createElement('div')
-    // newEl.style.backgroundColor = colorArray[ptsQuantity % 10]
     newEl.classList.add('pt')
     newEl.classList.add('pt-en')
     newEl.textContent = ptsQuantity
